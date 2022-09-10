@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    border: 1px solid;
+  }
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .container > * {
+    border: 1px solid;
+    margin: 0.2rem 0.1rem;
+  }
+  .full-width {
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+  }
+  .part-width {
+    height: 10rem;
+    padding: 1rem;
+  }
+  header {
+    background-color: orange;
+}
+  aside {
+    float: left;
+    width: 34%;
+    background-color: green;
+  }
+  main {
+    text-align: right;
+    float: right;
+    width: 64%;
+    background-color: darkmagenta;
+  }
+  .clr {
+    clear: both;
+    visibility: hidden;
+  }
+  footer {
+    background-color: royalblue;
+  }
