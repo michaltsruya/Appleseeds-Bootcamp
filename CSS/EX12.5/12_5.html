@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tool-tip</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 100px;
+}
+
+a[data-tooltip] {
+    position: relative;
+    text-decoration: none;
+}
+
+a[data-tooltip]:hover::after {
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    left: 0;
+    bottom: 125%;
+    content: attr(data-tooltip);
+    color: black;
+    background: yellow;
+    border-radius: 4.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+    </style>
+    </head>
+    <body>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+                ipsa beatae sint debitis repellendus eius similique. Est nostrum
+                beatae ut velit temporibus, officia reiciendis asperiores maxime
+                explicabo, molestiae natus tempora. Nihil beatae, est nobis
+                corrupti dicta dolores cupiditate explicabo molestiae
+                consectetur sint? Repellat quo ea a adipisci sapiente, nam omnis
+                iure voluptatibus dolorum corrupti hic similique officiis. Ea
+                aliquam exercitationem illum officiis. Excepturi alias quidem
+                magni eum iure dolore!
+                <a
+                    href="#"
+                    data-tooltip="this is a badass tooltip"
+                    target="_blank"
+                    >Hover over me!</a
+                >
+                Odio, sequi? Delectus autem nam quod quaerat laudantium mollitia
+                esse iusto ducimus. Assumenda repellat pariatur architecto ipsum
+                praesentium voluptate consequatur quod distinctio harum
+                voluptates, laudantium unde ad sed tempora deserunt dolore.
+            </p>
+        </div>
+    </body>
+</html>
