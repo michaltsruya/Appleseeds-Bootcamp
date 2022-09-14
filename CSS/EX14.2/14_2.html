@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: grey;
+}
+span {
+  position: relative;
+  z-index: 2;
+}
+.main {
+  margin: 60px;
+  width: 100%;
+  height: 50%;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  width: 180px;
+  height: 80px;
+
+  border: 2px black solid;
+}
+
+.btn1 {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn1::before {
+  content: "";
+  position: absolute;
+  background-color: blue;
+  transform: translateY(-100%);
+  transition: all 1s;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: hard-light;
+}
+.btn1:hover::before {
+  transform: translateY(0);
+}
+.btn2 {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.btn2::before {
+  content: "";
+  position: absolute;
+  transform: translateX(-100%);
+  transition: all 1s;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+.btn2:hover::before {
+  transform: translateX(0);
+}
+.btn3 {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: black;
+}
+.btn3::before {
+  content: "";
+  position: absolute;
+  transition: all 2s;
+  width: 110%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: blue;
+  transform-origin: top left;
+  transform: rotate(90deg);
+}
+.btn3:hover::before {
+  transform: rotate(0deg);
+}
+
+.btn4 {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+}
+.btn4:before {
+  content: "Scale";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  transition: all 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn4:hover:before {
+  background-color: rgb(0, 0, 0);
+  transform: scale(2.6);
+  color: white;
+}
+.btn5 {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+}
+.btn5:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.btn5:hover {
+  transform: skew(-10deg, -10deg);
+}
+.btn5:hover:before {
+  background-color: rgb(209, 70, 70);
+  transform: rotate(360deg) skew(0deg, 180deg);
+  color: white;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="btn btn1"><span>TranslateY</span></div>
+      <div class="btn btn2"><span>TranslateX</span></div>
+      <a class="btn btn3"><span>Rotate</span></a>
+
+      <div class="btn btn4"><span>Scale</span></div>
+      <div class="btn btn5"><span>Skew</span></div>
+    </div>
+  </body>
+</html>
