@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX9_3</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            background-color: orange;
+            text-align: center;
+            border: 1px solid black;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            height: 50px;
+            padding-top: 1%;
+            margin-left: 25%;
+            max-width: 50%;
+
+        }
+        main{
+            background-color: purple;
+            text-align: right;
+            border: 1px solid black;
+            padding-right: 20px;
+            margin-bottom: 10px;
+            height: 200px;
+            float: right;
+            max-width: 960px;
+            width: 34.5%;
+            padding-top: 1%;
+            margin-right: 25%;
+        }
+        .side{
+            background-color: green;
+            text-align: left;
+            border: 1px solid black;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            height: 200px;
+            float:left;
+            max-width: 960px;
+            margin-left: 25%;
+            width: 15%;
+            padding-top: 1%;
+        }
+        .clr{
+            clear: both;
+        }
+        footer{
+            background-color: rgb(98, 98, 251);
+            text-align: center;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            max-width: 50%;
+            height: 50px;
+            padding-top: 1%;
+            margin-left: 25%;
+        }
+        @media(max-width:500px){
+            .side{
+                display: none;
+            }
+            main{
+                width:50%
+            }
+        }
+    </style>
+</head>
+<body>
+  <header>
+    Header
+  </header> 
+  <main>
+    Main
+  </main>
+  <div class="side">
+    Side
+  </div>
+  <div class="clr"></div>
+  <footer>
+    Footer
+  </footer>
+</body>
+</html>
