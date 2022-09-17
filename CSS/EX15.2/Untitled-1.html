@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        .grid {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 1rem;
+      }
+
+      .item {
+        padding: 3rem;
+        background: #f4f4f4;
+        border: #ccc 1px solid;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+
+      .item-1 {
+        background-color: red;
+        grid-column: 1/3;
+
+        
+      }
+
+      
+      .item-2 {
+        background-color: blue;
+        grid-column: 1/2;
+
+        
+      }
+
+      .item-3 {
+        background-color: green;
+        /* grid-column: ; */
+
+        
+      }
+
+      .item-4 {
+        background-color: purple;
+        
+      }
+
+      .item-5 {
+        background-color: purple;
+
+        
+      }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+        <div class="item item-4"></div>
+        <div class="item item-5"></div>
+      </div>
+    
+</body>
+</html>
